@@ -22,14 +22,15 @@ def listando_tarefas():
 
 
 def removendo_tarefa():
-    for tarefa in enumerate(tarefas):
-        try:
-            print(f"Essas sao as tarefas disponíveis no sistema: {tarefas} ")
-            removendo_tarefa = int(input("Qual tarefa voce deseja remover: ").strip())
-            tarefas.pop(removendo_tarefa)
-            print(f"A tarefa {removendo_tarefa} foi removida com sucesso da sua lista!")
-        except ValueError:
-            print("Insira uma informacao valida, essa tarefa nao existe em sua lista!")
+    try:
+        for indice, tarefa in enumerate(tarefas):
+            print(indice, tarefa)
+
+        removendo_tarefa = int(input("Qual tarefa voce deseja remover: ").strip())
+        tarefas.pop(removendo_tarefa)
+        print(f"A tarefa {removendo_tarefa} foi removida com sucesso da sua lista!")
+    except ValueError:
+        print("Insira uma informacao valida, essa tarefa nao existe em sua lista!")
 
 
 def concluindo_tarefas():
