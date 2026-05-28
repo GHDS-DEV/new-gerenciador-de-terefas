@@ -27,8 +27,8 @@ def removendo_tarefa():
             print(indice, tarefa)
 
         removendo_tarefa = int(input("Qual tarefa voce deseja remover: ").strip())
-        tarefas.pop(removendo_tarefa)
-        print(f"A tarefa {removendo_tarefa} foi removida com sucesso da sua lista!")
+        tarefa_removida = tarefas.pop(removendo_tarefa)
+        print(f"A tarefa {tarefa_removida} foi removida com sucesso da sua lista!")
     except ValueError:
         print("Insira uma informacao valida, essa tarefa nao existe em sua lista!")
 
@@ -36,23 +36,27 @@ def removendo_tarefa():
 def concluindo_tarefas():
 
     try:
-        for tarefa in enumerate(tarefas):
+        for indice, tarefa in enumerate(tarefas):
             if not tarefa:
                 print("Nenhuma tarefa cadastrada.")
                 break
 
-            print(tarefas)
-            concluindo_tarefas = input(
-                "Informe uma tarefa para marcar como concluida: "
-            ).strip()
-            tarefas_concluidas.append(concluindo_tarefas)
-            tarefas.remove(concluindo_tarefas)
-            print(f"A terefa {concluindo_tarefas} foi concluida, parabens!")
+            print(indice, tarefa)
+        concluindo_tarefas = int(
+            input("Informe uma tarefa para marcar como concluida por indice: ").strip()
+        )
+        tarefas_concluidas.append(concluindo_tarefas)
+
+        tarefas.pop(concluindo_tarefas)
+
+        print(f"A terefa {concluindo_tarefas} foi concluida, parabens!")
+
     except ValueError:
         print("Insira uma informacao valida, essa tarefa nao existe em sua lista!")
 
 
 def ver_tarefas_concluidas():
+    print()
     print(f"Essas sao suas tarefas que ja foram concluidas! {tarefas_concluidas}")
 
 
