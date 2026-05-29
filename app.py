@@ -16,9 +16,11 @@ def adicionar_tarefa():
 def listando_tarefas():
     if not tarefas:
         print("Nenhuma tarefa cadastrada.")
+        return
+    print("Essas sao todas as suas tarefas:")
 
-    for tarefa in enumerate(tarefas):
-        print(f"Essas sao todas as suas tarefas: {tarefa}")
+    for indice, tarefa in enumerate(tarefas):
+        print(f"{indice} - {tarefa}")
 
 
 def removendo_tarefa():
@@ -49,7 +51,7 @@ def concluindo_tarefas():
 
         tarefas.pop(concluindo_tarefas)
 
-        print(f"A terefa {concluindo_tarefas} foi concluida, parabens!")
+        print(f"A terefa {tarefas[concluindo_tarefas]} foi concluida, parabens!")
 
     except ValueError:
         print("Insira uma informacao valida, essa tarefa nao existe em sua lista!")
