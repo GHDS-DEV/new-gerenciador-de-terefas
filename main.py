@@ -9,7 +9,6 @@ from app import limpar_tela
 
 opcoes_validas = ["1", "2", "3", "4", "5"]
 
-limpar_tela()
 while True:
     menu()
     escolha = input("Oque voce deseja fazer? ").strip()

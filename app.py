@@ -47,11 +47,12 @@ def concluindo_tarefas():
         concluindo_tarefas = int(
             input("Informe uma tarefa para marcar como concluida por indice: ").strip()
         )
-        tarefas_concluidas.append(concluindo_tarefas)
 
+        tarefa_concluida = tarefas[concluindo_tarefas]
+        tarefas_concluidas.append(tarefa_concluida)
         tarefas.pop(concluindo_tarefas)
 
-        print(f"A terefa {tarefas[concluindo_tarefas]} foi concluida, parabens!")
+        print(f"A terefa {tarefa_concluida} foi concluida, parabens!")
 
     except ValueError:
         print("Insira uma informacao valida, essa tarefa nao existe em sua lista!")
