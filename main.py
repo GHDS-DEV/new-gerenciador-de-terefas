@@ -7,11 +7,15 @@ from app import saindo_do_sistema
 from app import menu
 from app import limpar_tela
 
-opcoes_validas = ["1", "2", "3", "4", "5"]
+opcoes_validas = ["1", "2", "3", "4", "5", "6"]
 
 while True:
     menu()
     escolha = input("Oque voce deseja fazer? ").strip()
+
+    if escolha not in opcoes_validas:
+        print("Insira uma informação válida.")
+        continue
 
     if escolha == "1":
         adicionar_tarefa()
