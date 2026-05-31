@@ -1,1 +1,1 @@
-Esse projeto se trtata de um gerenciador de tarefas simples e básico, criado para aprimorar meus estudos em Python. A medida que vou aprendo, sigo resolvendo bugs, adicionando funções e dando uma cara nova para o sistema.
+Esse projeto se trtata de um gerenciador de tarefas simples e básico, criado para aprimorar meus estudos em Python. A medida que vou aprendendo, sigo resolvendo bugs, adicionando funções e dando uma cara nova para o sistema.
