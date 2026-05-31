@@ -84,4 +84,7 @@ def menu():
 def limpar_tela():
     import os
 
-    os.system("cls")
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
